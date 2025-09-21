@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orderan — Salsa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#4f46e5;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial; margin:0; background:var(--bg); color:#0f172a}
+    .container{max-width:980px; margin:28px auto; padding:20px}
+
+    /* Top gallery */
+    .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:18px}
+    .gallery img{width:100%; height:250px; object-fit:cover; border-radius:12px; box-shadow:0 6px 18px rgba(15,23,42,0.08)}
+
+    /* Main card */
+    .card{background:var(--card); border-radius:14px; padding:18px; box-shadow:0 10px 30px rgba(15,23,42,0.06)}
+    .row{display:flex; gap:18px; align-items:center}
+    .price{flex:0 0 220px; background:linear-gradient(90deg,#eef2ff, #f8fbff); border-radius:12px; padding:16px; text-align:center}
+    .price h2{margin:0; font-size:20px; color:var(--accent)}
+    .price p{margin:6px 0 0; color:var(--muted); font-weight:600}
+
+    .info{flex:1; display:flex; gap:14px; flex-wrap:wrap}
+    .contact{flex:1; min-width:220px; background:linear-gradient(180deg,#fff,#fbfdff); border-radius:12px; padding:12px}
+    .contact h3{margin:0 0 6px; font-size:16px}
+    .small{color:var(--muted); font-size:14px}
+    .line{height:1px;background:#eef2ff;margin:10px 0;border-radius:2px}
+
+    .grid-two{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+    .field{display:flex; gap:8px; align-items:center}
+    .icon{width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg,#f3f4ff,#eef2ff); display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    .cta{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+
+    /* Map box */
+    .map{flex:0 0 200px; min-width:200px; border-radius:12px; overflow:hidden}
+    .map a{display:block;padding:12px;text-decoration:none;color:inherit;background:linear-gradient(180deg,#fff,#fbfbff); height:100%;}
+    .coords{font-family:monospace; font-size:13px; color:var(--muted)}
+
+    /* Comments */
+    .comments{margin-top:18px}
+    .comment{display:flex; gap:12px; padding:12px 0; border-bottom:1px dashed #eef2ff}
+    .avatar{width:44px;height:44px;border-radius:50%;background:#e6e9ef; display:inline-block}
+    .cbody h4{margin:0;font-size:15px}
+    .cbody p{margin:6px 0 0;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:720px){
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .row{flex-direction:column}
+      .map{width:100%}
+    }
+  </style>
+</head>
+<body>
+    <h1><center>ORDERAN SALSA</center></h1>
+  <div class="container">
+    <!-- Top 4 photos -->
+<div class="gallery">
+<img src="1.jpg" alt="foto1">
+<img src="2.jpg" alt="foto2">
+<img src="3.jpg" alt="foto3">
+<img src="4.jpg" alt="foto4">
+</div>
+
+    <!-- Main information card -->
+    <div class="card">
+      <div class="row">
+        <div class="price">
+          <h2>1 jam 200k</h2>
+          <p>Harga per jam</p>
+        </div>
+
+        <div class="info">
+          <div class="contact">
+            <h3>Donasi / Transfer</h3>
+            <div class="line"></div>
+            <div class="grid-two">
+              <div>
+                <div class="field"><div class="icon">🏦</div><div>
+                  <div class="small">Nomor Rekening</div>
+                  <div style="font-weight:700;">089509671648</div>
+                  <div class="small">a.n. Salsa</div>
+                </div></div>
+              </div>
+
+              <div>
+                <div class="field"><div class="icon">📱</div><div>
+                  <div class="small">WhatsApp</div>
+                  <div style="font-weight:700;">089509671648</div>
+                  <div class="small">Instagram: @nychellya</div>
+                </div></div>
+              </div>
+            </div>
+
+            <div style="margin-top:10px">
+              <a class="cta" href="https://wa.me/6289509671648" target="_blank">Chat via WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="map">
+            <a href="https://www.google.com/maps?q=0.5028124258457323,101.43086402387658" target="_blank">
+              <div style="padding-bottom:8px"><strong>Lokasi</strong></div>
+              <div class="coords">Tengkerang Bar., Kec. Marpoyan Damai, Kota Pekanbaru, Riau 28124</div>
+              <div style="margin-top:10px;font-size:13px;color:var(--muted)">Buka di Google Maps</div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Comments section -->
+      <div class="comments">
+        <h3 style="margin:0 0 10px">Komentar</h3>
+
+        <!-- example comments (profile kosong) -->
+        <div class="comment">
+          <div class="avatar"></div>
+          <div class="cbody">
+            <h4>Anakmama</h4>
+            <p>sepongan nya enak banget</p>
+          </div>
+        </div>
+
+        <div class="comment">
+          <div class="avatar"></div>
+          <div class="cbody">
+            <h4>lendir</h4>
+            <p>Puas banget</p>
+          </div>
+        </div>
+
+        <div class="comment">
+          <div class="avatar"></div>
+          <div class="cbody">
+            <h4>Nikmat dunia</h4>
+            <p>Body mulus main nya halus crot dengan mulus</p>
+          </div>
+        </div>
+
+        <div class="comment">
+          <div class="avatar"></div>
+          <div class="cbody">
+            <h4>PecintaJanda</h4>
+            <p>goyang nya bikin cepat keluar</p>
+          </div>
+        </div>
+
+        <div class="comment">
+          <div class="avatar"></div>
+          <div class="cbody">
+            <h4>Penari Lintas</h4>
+            <p>memek tembem tetek lembut goyang nya ngebut</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
